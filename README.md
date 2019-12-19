@@ -15,8 +15,4 @@ This is a basic rest operation that currently provides two operations (add & mul
 
 # General
 The first microservice to launch is the eureka-server (java -jar target/eureka-server-0.0.1-SNAPSHOT.jar), this will create the eureka server, it uses the default port of 8761 so after successfully executing you can visit the eureka dashboard at this URL http://localhost:8761/ , initially it will show no services for discover we will get to this bit shortly, below is a screenshow of the initial dashboard
-
-x-special/nautilus-clipboard
-copy
-file:///home/rob/Pictures/Screenshot%20from%202019-12-19%2009-15-56.png
-
+![Alt text](/eureka-initial.png?raw=true "Eureka Initial Dashboard")
