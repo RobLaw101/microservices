@@ -44,7 +44,9 @@ Due to time constraints I could not do the below suggested improvements
 ". I begun integration tests but could could not complete on time using SpringBootTest annotation with injections etc, issue I had was loading a test.properties file to not enable the rest-operation to register with eureka (which caused an exception during test exuection), the code is competed out but included
 2. improve logging, the bare bones infrastructure is in place using logback (logback-spring.xml) for each microservice with the lombok Slf4j annotation, logging is piped into a file (loback-spring.xml configures the path to pipe to, this is relevant to my machine so will need to be updated, ideally it should read from a property)
 3. improve exception handling pretty much uses the basic Spring Basic stuff which is sufficient but could be more detailed etc
-4. used a DB SQL or NoSQL to store the user credentails, currently only two uses are hardcoded in memory as below in UserDetails class in the auth-service microservice
+4. used a DB SQL or NoSQL to store the user credentails, currently only two users are hardcoded in memory as below in UserDetailsServiceImpl class in the auth-service microservice -->
+   * rob/12345 
+   * bob/12345
 
 Lastly as the rest-operation service does not store state & has no side effects they are inherently thread safe, this combined with the more or less stateless REST web service allows the application to scale horizontal if needed, this could be composed via a number of Docker images & using AWS elasticity to spin up instances dynamically & register themselves with the eureka server to handle massive concurrent requests & similary reduce when load decreases.
     
